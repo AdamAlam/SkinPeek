@@ -361,10 +361,6 @@ const commands = [
         name: "valstatus",
         description: "Check the status of your account's VALORANT servers"
     },
-    {
-        name: "info",
-        description: "Show information about the bot"
-    }
 ];
 
 client.on("messageCreate", async (message) => {
