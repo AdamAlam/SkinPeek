@@ -46,10 +46,14 @@
     "ACCOUNT_NOT_FOUND": "**Couldn't find that account in your registered accounts!**",
     "ACCOUNT_NUMBER_TOO_HIGH": "**You only have {n} accounts!**",
     "TOO_MANY_ACCOUNTS": "**You can only have maximum {n} accounts on the bot!** `/forget` some accounts and try again.",
-    "GENERIC_ERROR": ":no_entry_sign: **There was an error trying to do that!** I blame Riot.\n`{e}`"
+    "GENERIC_ERROR": ":no_entry_sign: **There was an error trying to do that!** I blame Riot.\n`{e}`",
+    "QUEUE_WAIT": "Many people are using the bot! Please wait... (estimated: <t:{t}:R>)",
+    "NOT_A_NUMBER": "This is not a number, please enter a valid number.",
+    "INVALID_PAGE_NUMBER": "Invalid page number, please enter a value between **1 - {max}**"
   },
   "info":{
     "SHOP_HEADER": "Daily shop for **{u}** (new shop <t:{t}:R>)",
+    "ACCESSORY_SHOP_HEADER": "Accessory shop for **{u}** (new shop <t:{t}:R>)",
     "BUNDLE_HEADER": "Featured bundle: **{b}**",
     "BUNDLES_HEADER": "Currently featured bundles:",
     "BUNDLES_HEADER_DESC": "Use `/bundle` to inspect a specific bundle",
@@ -76,12 +80,14 @@
     "WALLET_HEADER": "**{u}**'s Wallet:",
     "VPOINTS": "VALORANT Points",
     "RADIANITE": "Radianite",
+    "KCREDIT": "Kingdom Credit",
     "ALERT_HAPPENED": ":tada: <@{i}> The **{s}** is in **{u}**'s daily shop!\nIt will be gone <t:{t}:R>.",
     "ALERT_CHOICE": "Which skin would you like to set a reminder for?",
     "ALERT_CHOICE_PLACEHOLDER": "Select skin:",
     "ALERT_SET": "Successfully set an alert for the **{s}**!",
     "ALERT_BP_SKIN": "\n***Note:** This is a battlepass skin, so it's not gonna appear in your shop!*",
     "ALERT_IN_CHANNEL": "in <#{c}>",
+    "ALERT_IN_CHANNEL_NAME": "in #{c}",
     "ALERT_IN_DM_CHANNEL": "in DMs",
     "ONE_ALERT": "You have one alert set up:",
     "MULTIPLE_ALERTS": "The alerts you currently have set up:",
@@ -114,6 +120,8 @@
     "ACCOUNT_CURRENTLY_SELECTED": "(Currently selected)",
     "SWITCH_ACCOUNT_BUTTON": "Account #{n}",
     "SWITCH_DESIGN_BUTTON": "Switch design",
+    "ACCESSORY_SHOP_SWITCH_BUTTON": "Accessory shop",
+    "DAILY_SHOP_SWITCH_BUTTON": "Skin shop",
     "LOADING": "Loading...",
     "HIDDEN_USERNAME": "username hidden",
     "NO_USERNAME": "[No username]",
@@ -122,7 +130,11 @@
     "MAINTENANCE_TYPE": "maintenance",
     "INCIDENT_TYPE": "incident",
     "LAST_UPDATED": "Last updated <t:{t}:R>",
-    "UNHANDLED_COMMAND": "Yer a wizard harry!"
+    "UNHANDLED_COMMAND": "Yer a wizard Harry!",
+    "SELECT_SKIN_WITH_LEVEL":"Select skin to show video:",
+    "SELECT_LEVEL_OF_SKIN":"Select level of skin:",
+    "SHARDS_LOADING": "The bot is still starting up! Please wait a few seconds and try again. (Shards loading...)",
+    "NO_MORE_ACCESSORIES": "You've already got all the swagger! :sunglasses:"
   },
   "battlepass": {
     "CALCULATIONS_TITLE": "\uD83D\uDCC8 Battlepass Calculation",
@@ -150,7 +162,9 @@
     "TYPE": "Type",
     "SKIN": "Skin",
     "CARD": "Card",
-    "GUN_BUDDY": "Gun Buddy"
+    "GUN_BUDDY": "Gun Buddy",
+    "CURRENCY": "Currency",
+    "SPRAY": "Spray"
   },
   "settings": {
     "TRUE": "Yes",
@@ -161,9 +175,16 @@
     "SET_QUESTION": "What do you want to set the setting **{s}** to?",
     "CONFIRMATION": "The setting **{s}** is now set to **{v}**.",
     "dailyShop": "Send your shop every day",
+    "pingOnAutoDailyShop": "@ping you when automatically sending your shop",
     "hideIgn": "Hide in-game name",
     "othersCanViewShop": "Allow others to use /shop with your username",
     "othersCanViewColl": "Allow others to use /collection with your username",
+    "othersCanUseAccountButtons": "Allow others to press buttons on your /shop",
     "locale": "Language"
+  },
+  "modal": {
+    "PAGE_TITLE": "Page Navigator",
+    "PAGE_INPUT_PLACEHOLDER": "Please only input a number.",
+    "PAGE_INPUT_LABEL": "Go to page (1-{max})"
   }
 }

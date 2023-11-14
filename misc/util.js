@@ -54,6 +54,7 @@ export const fetch = (url, options={}) => {
             headers: {
                 cookie: "dummy=cookie", // set dummy cookie, helps with cloudflare 1020
                 "Accept-Language": "en-US,en;q=0.5", // same as above
+                "referer": "https://github.com/giorgi-o/SkinPeek", // to help other APIs (e.g. Spirit's) see where the traffic is coming from
                 ...options.headers
             },
             ciphers: tlsCiphers.join(':'),
@@ -632,3 +633,8 @@ export const ensureUsersFolder = () => {
 }
 
 export const findKeyOfValue = (obj, value) => Object.keys(obj).find(key => obj[key] === value);
+
+export const calcLength = (any) => {
+    if(!isNaN(any)) any = any.toString();
+    return any.length;
+}

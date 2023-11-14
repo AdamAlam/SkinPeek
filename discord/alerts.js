@@ -111,6 +111,7 @@ export const checkAlerts = async () => {
                     const rawUserAlerts = alertsForUser(id, i);
                     const dailyShopChannel = getSetting(id, "dailyShop");
                     if(!rawUserAlerts?.length && !dailyShopChannel) continue;
+                    if(!rawUserAlerts?.length && dailyShopChannel && i !== userJson.currentAccount) continue;
 
                     if(shouldWait) {
                         await wait(config.delayBetweenAlerts); // to prevent being ratelimited
@@ -298,9 +299,12 @@ export const sendDailyShop = async (id, shop, channelId, valorantUser, tryOnOthe
         return;
     }
 
+    const shouldPing = getSetting(id, "pingOnAutoDailyShop");
+    const content = shouldPing ? `<@${id}>` : null;
+
     const rendered = await renderOffers(shop, id, valorantUser, await VPEmoji(id, channel));
     await channel.send({
-        content: `<@${id}>`,
+        content,
         ...rendered
     });
 }
